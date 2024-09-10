@@ -1,0 +1,8 @@
+numpy
+black
+flake8
+isort
+mkdocs
+pip
+python-dotenv
+-e .
