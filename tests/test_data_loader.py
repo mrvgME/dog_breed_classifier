@@ -13,6 +13,6 @@ class TestDataLoader(unittest.TestCase):
         human_files = DataLoader.read_dataset('humans')
         dogs_files = DataLoader.read_dataset('dogs')
 
-        self.assertTrue(len(human_files == 13233))
-        self.assertTrue(len(dogs_files == 8351))
+        self.assertTrue(len(human_files) == 13233)
+        self.assertTrue(len(dogs_files) == 8351)
 
