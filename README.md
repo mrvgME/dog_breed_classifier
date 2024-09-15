@@ -1,6 +1,27 @@
-# Dog Breed Classifier
+# Dog Breed Classifier and Human Face Detector
 
-Classify dog breeds and human faces using CNN's and Python.
+Classify dog breeds and human faces using CNN's and Python. The project uses pre-trained networks to classify dog breeds and detect human faces using opencv. CNN's models are designed using torch and trianed in the data. To get the full dataset ask me for private message, only a data sample is provided publicly.
+
+## How to install
+
+For devs:
+1. Run **pip install -r requirements.txt** in the root directoy. Create [conda](https://conda.io/projects/conda/en/latest/user-guide/install/index.html) environment if needed.
+2. Add **.env** file with variable **project_dir** pointing to root folder.
+
+For users:
+
+1. **pip install .** in the root directoy to install it as a python package.
+
+## Resources in this project
+Currently implemented you can find:
+- Management of image database and image processing using [OpenCV](https://opencv.org/get-started/). See [**dog_breed_classifier/dataset.py**](https://github.com/mrvgME/dog_breed_classifier/blob/main/dog_breed_classifier/dataset.py) and [**test/src/data/sql_manager.py**](https://github.com/mrvgME/dog_breed_classifier/blob/main/tests/test_data_loader.py).
+- Human face detector using pre-trained classifier. See [**dog_breed_classifier/modelling/predict.py**](https://github.com/mrvgME/dog_breed_classifier/blob/main/dog_breed_classifier/modelling/predict.py) and [**tests/test_model_prediction.py**](https://github.com/mrvgME/dog_breed_classifier/blob/main/tests/test_model_prediction.py). See detected face below. I use OpenCV's implementation of Haar feature-based cascade classifiers to detect human faces in images. OpenCV provides many pre-trained face detectors, stored as XML files on [github](https://github.com/opencv/opencv/tree/master/data/haarcascades). I have downloaded one of these detectors and stored it in [**models/haarcascades**](https://github.com/mrvgME/dog_breed_classifier/tree/main/models/haarcascades).
+
+![alt text](https://github.com/mrvgME/dog_breed_classifier/blob/main/reports/figures/detected_face.png?raw=true)
+
+## How to contribute
+
+Just fork the repository and ask for merge request. Otherwise, create issue in the repository with suggestions.
 
 ## Project Organization
 
